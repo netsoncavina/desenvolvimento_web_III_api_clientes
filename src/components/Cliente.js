@@ -9,11 +9,13 @@ export default function Client(props) {
       <Card style={{ width: "18rem" }}>
         <Card.Img variant="top" src="./imagens/usuario.png" />
         <Card.Body>
-          <Card.Title>{props.name}</Card.Title>
+          <Card.Title>{props.nome}</Card.Title>
         </Card.Body>
         <ListGroup className="list-group-flush">
           <ListGroupItem>CPF : {props.cpf}</ListGroupItem>
-          <ListGroupItem>Data de nascimento : {props.nascimento}</ListGroupItem>
+          <ListGroupItem>
+            Data de nascimento : {props.dataNascimento}
+          </ListGroupItem>
           <ListGroupItem>Data de cadastro : {props.dataCadastro}</ListGroupItem>
           <ListGroupItem>Sexo : {props.sexo}</ListGroupItem>
           <ListGroupItem>CEP : {props.cep}</ListGroupItem>
