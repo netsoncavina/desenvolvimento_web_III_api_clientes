@@ -17,7 +17,9 @@ export default function Client(props) {
             Data de nascimento : {props.dataNascimento}
           </ListGroupItem>
           <ListGroupItem>Data de cadastro : {props.dataCadastro}</ListGroupItem>
-          <ListGroupItem>Sexo : {props.sexo}</ListGroupItem>
+          <ListGroupItem>
+            Sexo : {props.sexo == "M" ? "Masculino" : "Feminino"}
+          </ListGroupItem>
           <ListGroupItem>CEP : {props.cep}</ListGroupItem>
           <ListGroupItem>Endereço : {props.endereco}</ListGroupItem>
           <ListGroupItem>Complemento : {props.complemento}</ListGroupItem>
