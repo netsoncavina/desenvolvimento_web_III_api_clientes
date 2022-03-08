@@ -10,6 +10,7 @@ function App() {
   const [clientes, setClientes] = useState([]);
   const url =
     "https://cors-anywhere.herokuapp.com/https://dw-scc-rest.herokuapp.com/api/v1/clientes";
+
   const getClientes = () => {
     axios.get(url).then((response) => {
       setClientes(response.data);

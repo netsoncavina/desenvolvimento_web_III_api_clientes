@@ -1,6 +1,7 @@
 import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
 import ListGroupItem from "react-bootstrap/ListGroupItem";
+import { cpfMask, cepMask } from "./mascaras";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 export default function Client(props) {
@@ -12,15 +13,15 @@ export default function Client(props) {
           <Card.Title>{props.nome}</Card.Title>
         </Card.Body>
         <ListGroup className="list-group-flush">
-          <ListGroupItem>CPF : {props.cpf}</ListGroupItem>
+          <ListGroupItem>CPF : {cpfMask(props.cpf)}</ListGroupItem>
           <ListGroupItem>
             Data de nascimento : {props.dataNascimento}
           </ListGroupItem>
           <ListGroupItem>Data de cadastro : {props.dataCadastro}</ListGroupItem>
           <ListGroupItem>
-            Sexo : {props.sexo == "M" ? "Masculino" : "Feminino"}
+            Sexo : {props.sexo === "M" ? "Masculino" : "Feminino"}
           </ListGroupItem>
-          <ListGroupItem>CEP : {props.cep}</ListGroupItem>
+          <ListGroupItem>CEP : {cepMask(props.cep)}</ListGroupItem>
           <ListGroupItem>Endereço : {props.endereco}</ListGroupItem>
           <ListGroupItem>Complemento : {props.complemento}</ListGroupItem>
         </ListGroup>
